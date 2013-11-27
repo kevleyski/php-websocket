@@ -91,29 +91,35 @@ class Connection
 			$origin = (isset($headers['Origin'])) ? $headers['Origin'] : $origin;
 			if($origin === false)
 			{
+/*
 				$this->log('No origin provided.');
 				$this->sendHttpResponse(401);
 				stream_socket_shutdown($this->socket, STREAM_SHUT_RDWR);
 				$this->server->removeClientOnError($this);
 				return false;
+*/
 			}
 			
 			if(empty($origin))
 			{
+	/*
 				$this->log('Empty origin provided.');
 				$this->sendHttpResponse(401);
 				stream_socket_shutdown($this->socket, STREAM_SHUT_RDWR);
 				$this->server->removeClientOnError($this);
 				return false;
+*/
 			}
 			
 			if($this->server->checkOrigin($origin) === false)
 			{
+/*
 				$this->log('Invalid origin provided.');
 				$this->sendHttpResponse(401);
 				stream_socket_shutdown($this->socket, STREAM_SHUT_RDWR);
 				$this->server->removeClientOnError($this);
 				return false;
+*/
 			}
 		}		
 		

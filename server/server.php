@@ -10,6 +10,8 @@ error_reporting(E_ALL);
 
 require(__DIR__ . '/lib/SplClassLoader.php');
 
+date_default_timezone_set('Australia/Sydney');
+
 $classLoader = new SplClassLoader('WebSocket', __DIR__ . '/lib');
 $classLoader->register();
 
